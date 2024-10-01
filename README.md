@@ -1,1 +1,5 @@
-# mr_mart
+# MR Mart
+
+## E-commerce project
+
+- User can create account.

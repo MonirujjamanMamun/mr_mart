@@ -1,6 +1,7 @@
 const express = require('express');
 const createError = require('http-errors');
-const UserRouter = require('./router/UserRouter');
+const mongoose = require('mongoose');
+const userRouter = require('./router/UserRouter');
 const connectDB = require('./config/db');
 const dummyRouter = require('./router/dummyRouter');
 const app = express();
@@ -24,7 +25,7 @@ connectDB();
 
 // Routes
 app.use('/api/dummyuser', dummyRouter);
-app.use('/api/users', UserRouter);
+app.use('/api/users', userRouter);
 
 // Home page route
 app.get('/', (req, res) => {
